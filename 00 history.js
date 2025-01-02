@@ -40,3 +40,19 @@ function solution(n) {
         }
     }
 }
+
+
+//https://school.programmers.co.kr/learn/courses/30/lessons/132267
+function solution(a, b, n) {
+    let answer = 0;
+    let i = n;
+    
+    while (i>=a) {
+        answer += Math.floor(i / a) * b;
+        i = Math.floor(i / a) * b + (i % a);
+        
+    }
+    return answer;
+}
+
+
