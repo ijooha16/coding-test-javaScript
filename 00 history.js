@@ -56,3 +56,17 @@ function solution(a, b, n) {
 }
 
 
+//https://school.programmers.co.kr/learn/courses/30/lessons/135808
+
+function solution(k, m, score) {
+    let answer = 0;
+    
+    score.sort((a,b) => b-a);
+
+    for (let i=0; i<Math.floor(score.length/m); i++) {
+        let box = score.slice(i*m, (i+1)*m);
+        answer += box[m-1];
+    }
+    return answer*m;
+}
+
